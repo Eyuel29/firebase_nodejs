@@ -62,13 +62,13 @@ app.post('[/]?[a-zA-Z0-9\-_\/]*?',async (req, res, next) =>{
             res.end();
         break;
 
-        case '/updateForm':
+        case '/updateform':
             let idForm = req.body.id;
             const doc = await readData(idForm);
             const val = {
                 "noteTitle" : doc.noteTitle,
                 "noteBody" : doc.noteBody,
-                "todoId" : id,
+                "todoId" : idForm,
             }
             res.render('edit',{ val : val });
             res.end();
