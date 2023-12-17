@@ -1,0 +1,20 @@
+<script>
+    function deleteTodo() {
+       return confirm('Do you really want to delete the item?');
+    }
+</script>
+<ul >
+    <% result.forEach(todo => { %>
+        <li id="note" class="note"><h1 class="inline-block title" ><%= todo.noteTitle %></h1>
+            <form class="inline-block" action="/updateForm" method="post" >
+                <input type="hidden" name="id" value="<%= todo.id %>">
+                <button class="floatingButton" id="fbEdit" type="submit">EDIT</button>
+            </form>
+            <form onsubmit="return deleteTodo()" class="inline-block" action="/delete" method="post" >
+                <input type="hidden" name="id" value="<%= todo.id %>">
+                <button class="floatingButton" id="fbDelete" type="submit">DELETE</button>
+            </form>
+        <p class="lead"><%= todo.noteBody %></p>
+    <% }) %>
+</li>
+</ul>

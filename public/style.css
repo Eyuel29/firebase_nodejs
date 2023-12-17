@@ -1,0 +1,169 @@
+:root{
+    font-size: 62.7%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 1.7rem;
+    background: #DDFFFF;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar{
+    display: flex;
+    width: 100vw;
+    background: #6666FF;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    right: 0;
+    left: 0;
+    top: 0;
+    position: sticky;
+}
+
+#nav-options{
+    display: inline-block;
+    list-style: none;
+}
+
+.nav-options a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #FFFFFF;
+    transition: 0.3s;
+}
+
+.nav-options a:hover{
+  color: #FF0000;
+  transition: 0.3s;
+}
+
+.nav-options li{
+    display: inline-block;
+    padding: 0rem 3rem;
+}
+
+.title{
+    font-size: 1.8rem;
+    font-family: Roboto;
+    margin: 2rem 3rem;
+}
+
+.logo{
+    display: inline-block;
+    color: #FFFFFF;
+}
+
+.userForm{
+    padding: 2rem;
+    background: #DDFFFF;
+    width: 50vw;
+    margin: 5rem 5rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.userInput{
+    display: block;
+    padding: 1.5rem;
+    width: 100%;
+    margin: 2.3rem auto;
+    outline: none;
+    border: none;
+    font-size: 1.7rem;
+}
+.inputBtn{
+    padding: 3rem;
+    width: 49%;
+    font-weight: bold;
+    border: none;
+    color: #FFF;
+    font-size: 1.7rem;
+    background: #6666FF;
+}
+.footer{
+    padding: 2rem;
+    width: 100vw;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    background: #6666FF;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+.lead{
+    font-size: 1.8rem;
+    font-family: Roboto;
+    margin: 2rem 3rem;
+    max-width: 80rem;
+}
+
+.inline-block{
+    display: inline-block;
+}
+
+.note{
+    padding: 3rem;
+    background: #EEFFFF;
+    margin: 2.5rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;   
+    position: relative;
+}
+
+.note ul li{
+    list-style: none;
+}
+
+#note:hover .floatingButton{
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.floatingButton{
+    background: #8888FF;
+    padding: 1rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    border: none;
+    position: absolute;
+    width: 8rem;
+    display: none;
+    transition: 0.5s;
+}
+
+#fbEdit{
+    top: 20;
+    right: 120;
+}
+
+#fbDelete{
+    right: 20;
+    top: 20;
+}
+
+@media (max-width: 600px) {
+ 
+    :root{
+        font-size: 42.7%;
+    }
+    
+    .userForm{
+        width: 85vw;
+    }
+
+    .floatingButton{
+        display: inline-block;
+    }
+}

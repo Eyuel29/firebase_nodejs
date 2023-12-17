@@ -1,0 +1,9 @@
+<div class="userForm">
+    <form class="form" action="/update" method="post">
+        <input type="text" value=" <%= val.noteTitle %>  " name="noteTitle" class="userInput" placeholder="Enter title" required>
+        <textarea rows="8" name="noteBody" class="userInput" placeholder="Enter your note  here" required><%= val.noteBody %></textarea>
+        <input type="hidden" name="id" value="<%= val.todoId %>">
+        <Button class="inputBtn" type="submit">Submit</Button>
+        <Button class="inputBtn" type="reset">Cancel</Button>
+    </form>
+</div>
